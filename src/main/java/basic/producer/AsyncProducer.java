@@ -28,7 +28,7 @@ public class AsyncProducer {
             Message msg = new Message("TopicTest",
                     "TagA",
                     "OrderID188",
-                    "Hello world".getBytes(RemotingHelper.DEFAULT_CHARSET));
+                    ("Hello world" + i).getBytes(RemotingHelper.DEFAULT_CHARSET));
             // SendCallback接收异步返回结果的回调
             producer.send(msg, new SendCallback() {
                 @Override
